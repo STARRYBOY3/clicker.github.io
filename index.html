@@ -1,1 +1,16 @@
+<!doctype HTML>
+<html>
+<body>
+    <div id = "total"> Total clicks: 0</div>
+    <buttonid id="click" type = "button">click</button>
+</body>
+<script>
+    var clicks = 0;
 
+    document.getElementById("click").onclick = function () {
+        clicks ++;
+        var i = document.getElementById("total");
+        i.innerHTML = "Total clicks: " + clicks;
+    }
+</script>
+</html>
