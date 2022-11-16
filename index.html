@@ -18,6 +18,11 @@
                 left: 80px;
                 top: 150px;
             }
+            #cps10 {
+                position:absolute;
+                left: 80px;
+                top: 200px;
+            }
         </style>
     </head>
 <body>
@@ -25,13 +30,16 @@
     <button id="click" type = "button">Click</button>
     <button id="upgrade" type = "button"> Increase click power</button>
     <button id="cps" type="button"> +1 clicks per second</button>
+    <button id="cps10" type="button"> +10 clicks per second</button>
 </body>
 <script>
     var clicks = 0;
     var click_power = 1;
     var cps = 0;
+    var cps10 = 0;
     var cost = 25;
     var cpscost = 100;
+    var cps10cost = 1000;
 
     document.getElementById("click").onclick = function () {
         clicks += click_power;
@@ -60,8 +68,22 @@
     setInterval(function(){
         clicks += cps;
         var iiii = document.getElementById("total");
-        iiii.innerHTML = "Total clicks: " + clicks;h
+        iiii.innerHTML = "Total clicks: " + clicks;
     },1000);
+    document.getElementById("cps10").onclick = function () {
+        if (cps10cost > clicks) {
+            return alert ("not enough clicks");
+        }
+        cps10 += 10;
+        clicks -= cps10cost;
+        var iiii = document.getElementById("total");
+        iiii.innerHTML = "Total clicks: " + clicks;
+    }
+    setInterval(function(){
+        clicks += cps10;
+        var V = document.getElementById("total");
+        V.innerHTML = "Total clicks: " + clicks;
+    }, 4000);
 </script>
 </html> 
  
