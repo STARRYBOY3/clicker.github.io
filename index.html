@@ -31,8 +31,14 @@
     <button id="upgrade" type = "button"> Increase click power</button>
     <button id="cps" type="button"> +1 clicks per second</button>
     <button id="cps10" type="button"> +10 clicks per second</button>
+    <button id="prestige" type ="button"> Prestige</button>
+    <p id ="instuctions"> Welcome, to clicker.github.io (working on a custom domain) a clicker/idle game. Some instructions: 
+        click the Click button, buy upgrades. Increase click power cost: 25 clicks, +1 clicks per second: cost : 100 clicks, +10 clicks per second cost: 1000
+        prestige: depends on how much you have (though I would recomend 1,000,000 clicks)  
+    </p>
 </body>
 <script>
+    //variables
     var clicks = 0;
     var click_power = 1;
     var cps = 0;
@@ -40,7 +46,7 @@
     var cost = 25;
     var cpscost = 100;
     var cps10cost = 1000;
-
+    // every function needed to run the game
     document.getElementById("click").onclick = function () {
         clicks += click_power;
         var i = document.getElementById("total");
