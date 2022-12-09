@@ -57,9 +57,11 @@
     var cost = 25;
     var cpscost = 100;
     var cps10cost = 1000;
+    var Prestige = 0;
     // every function needed to run the game
     document.getElementById("click").onclick = function () {
         clicks += click_power;
+        clicks += Prestige;
         var i = document.getElementById("total");
         i.innerHTML = "Total clicks: " + clicks;
     }
@@ -84,6 +86,7 @@
     }
     setInterval(function(){
         clicks += cps;
+        clicks += Prestige;
         var iiii = document.getElementById("total");
         iiii.innerHTML = "Total clicks: " + clicks;
     },1000);
@@ -98,9 +101,18 @@
     }
     setInterval(function(){
         clicks += cps10;
+        clicks += Prestige;
         var V = document.getElementById("total");
         V.innerHTML = "Total clicks: " + clicks;
     }, 4000);
+    document.getElementById("prestige").onclick = function () {
+        if (clicks < 100000) {
+            return alert ("Not enough to prestige");
+        }
+        if (clicks > 200000) {
+            Prestige++;
+        }
+    }
 </script> 
 </html>   
   
