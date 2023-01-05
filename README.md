@@ -3,7 +3,7 @@ Hello there are two parts to this README. One is for if you downloaded the zip t
 
 
 
-First, if you are on github to set this up go to https://starryboy3.github.io/clicker.github.io/.
+First, if you are on github to set this up go to https://starryboy3.github.io/clicker/.
 
 
 Second, if you are viewing this file after downloading the ZIP. All you need to do is right click the file and open as default and not as text it should load up in your browser.
