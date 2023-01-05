@@ -3,10 +3,26 @@
     <head>
         <meta charset="utf-8">
         <title>Leaderboards</title>
+        <style>
+            #Welcome{
+                position:absolute;
+                left: 100px;
+            }
+            #Submit{
+                position:absolute;
+                left:100px;
+                top:800px;
+            }
+        </style>
     </head>
     <body>
-        <div>
-            hi
-        </div>
+        <div id="Welcome"> This is where Scores will be stored.</div>
+        <button id="Submit" type="button">Submit Scores</button>
     </body>
+    <script>
+        var score = 0;
+        Document.getElementById("Submit").onclick = function(){
+            
+        }
+    </script>
 </html>
