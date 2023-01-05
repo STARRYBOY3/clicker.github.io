@@ -58,7 +58,7 @@
 </body>
 <script>
     //variables
-    var clicks = 0;
+    var clicks = 200000;
     var click_power = 1;
     var cps = 0;
     var cps10 = 0;
@@ -94,7 +94,6 @@
     }
     setInterval(function(){
         clicks += cps;
-        clicks += Prestige;
         var iiii = document.getElementById("total");
         iiii.innerHTML = "Total clicks: " + clicks;
     },1000);
@@ -109,7 +108,6 @@
     }
     setInterval(function(){
         clicks += cps10;
-        clicks += Prestige;
         var V = document.getElementById("total");
         V.innerHTML = "Total clicks: " + clicks;
     }, 4000);
