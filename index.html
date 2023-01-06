@@ -58,7 +58,7 @@
 </body>
 <script>
     //variables
-    var clicks = 200000;
+    var clicks = 0;
     var click_power = 1;
     var cps = 0;
     var cps10 = 0;
@@ -112,20 +112,20 @@
         V.innerHTML = "Total clicks: " + clicks;
     }, 4000);
     document.getElementById("prestige").onclick = function () {
-        if (clicks < 100000) {
+        if (clicks < 199999) {
             return alert ("Not enough clicks to prestige");
-        }
-        if (clicks > 200000) {
-            Prestige++;
-            clicks = 0;
-            click_power = 0;
-            cps = 0;
-            cps10 = 0;
         }
         if (clicks > 400000) {
             Prestige += 2;
-            clicks = 0;
-            click_power = 0;
+            clicks = 100;
+            click_power = 10;
+            cps = 0;
+            cps10 = 0;
+        }
+        if (clicks > 200000) {
+            Prestige++;
+            clicks = 50;
+            click_power = 5;
             cps = 0;
             cps10 = 0;
         }
